@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CustomAudioPlayer"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="CustomAudioPlayer" Height="435" Width="888">
+        Title="CustomAudioPlayer" Height="500" Width="888">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#FFDADADA"/>
@@ -44,41 +44,44 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <StackPanel Background="White" Orientation="Horizontal" Width="888" Height="419">
-        <Border BorderThickness="0,1,1,0" BorderBrush="#FF464646">
-            <StackPanel Width="530" Height="419" Background="#FF636668">
-                <Canvas Name="BitAnimation" Width="470" Height="200" Margin="30" Background="#FF464646"/>
-                <Label Name="TrackNameLabel" Content="...no audio playing..." Margin="30, -20, 30, 0" Width="470" 
-                       Height="40" HorizontalContentAlignment="Center" Foreground="#FFDADADA" FontSize="20"/>
-                <Canvas Name="TrackBar" Width="470" Height="9">
-                    <StackPanel Width="470" Height="5" Margin="0, 2, 0, 0" Background="#FF464646"/>
-                </Canvas>
-                <StackPanel Width="470" Height="40" Orientation="Horizontal">
-                    <Label Name="CurTimeLabel" Content="0:00" Foreground="#FFDADADA" FontSize="18" Width="235" HorizontalContentAlignment="Left"/>
-                    <Label Name="AllTimeLabel" Content="0:00" Foreground="#FFDADADA" FontSize="18" Width="235" HorizontalContentAlignment="Right"/>
+    <StackPanel Width="888" Height="470">
+        <StackPanel Background="White" Orientation="Horizontal" Width="888" Height="419">
+            <Border BorderThickness="0,1,1,0" BorderBrush="#FF464646">
+                <StackPanel Width="530" Height="419" Background="#FF636668">
+                    <Canvas Name="BitAnimation" Width="470" Height="200" Margin="30" Background="#FF464646"/>
+                    <Label Name="TrackNameLabel" Content="...no audio playing..." Margin="30, -20, 30, 0" Width="470" 
+                           Height="40" HorizontalContentAlignment="Center" Foreground="#FFDADADA" FontSize="20"/>
+                    <Canvas Name="TrackBar" Width="470" Height="9">
+                        <StackPanel Width="470" Height="5" Margin="0, 2, 0, 0" Background="#FF464646"/>
+                    </Canvas>
+                    <StackPanel Width="470" Height="40" Orientation="Horizontal">
+                        <Label Name="CurTimeLabel" Content="0:00" Foreground="#FFDADADA" FontSize="18" Width="235" HorizontalContentAlignment="Left"/>
+                        <Label Name="AllTimeLabel" Content="0:00" Foreground="#FFDADADA" FontSize="18" Width="235" HorizontalContentAlignment="Right"/>
+                    </StackPanel>
+                    <StackPanel Width="470" Height="100" Margin="30, -30, 30, 30" Orientation="Horizontal">
+                        <Button Name="BackBtn" Height="60" Width="60" Margin="84, 0, 30, 0"/>
+                        <Button Name="PlayBtn" Height="60" Width="60" Margin="30, 0"/>
+                        <Button Name="NextBtn" Height="60" Width="60" Margin="30, 0"/>
+                    </StackPanel>
                 </StackPanel>
-                <StackPanel Width="470" Height="100" Margin="30, -30, 30, 30" Orientation="Horizontal">
-                    <Button Name="BackBtn" Height="60" Width="60" Margin="84, 0, 30, 0"/>
-                    <Button Name="PlayBtn" Height="60" Width="60" Margin="30, 0"/>
-                    <Button Name="NextBtn" Height="60" Width="60" Margin="30, 0"/>
-                </StackPanel>
-            </StackPanel>
-        </Border>
+            </Border>
 
-        <Border BorderThickness="0,1,1,0" BorderBrush="#FF464646">
-            <StackPanel Width="270" Height="419" Background="#FF636668">
-                <StackPanel Width="270" Height="20" Background="#FF464646">
+            <Border BorderThickness="0,1,1,0" BorderBrush="#FF464646">
+                <StackPanel Width="270" Height="419" Background="#FF636668">
+                    <StackPanel Width="270" Height="20" Background="#FF464646">
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-        </Border>
+            </Border>
 
-        <Border BorderThickness="0,1,0,0" BorderBrush="#FF464646">
-            <StackPanel Width="72" Height="419" Background="#FF464646">
-                <Button Width="52" Height="52" Name="AddBtn" Margin="0, 30, 0, 10" />
-                <Button Width="52" Height="52" Name="UpdateBtn" Margin="0, 20" />
-                <Button Width="52" Height="52" Name="SettingsBtn" Margin="0, 20" />
-                <Button Width="52" Height="52" Name="QuestionBtn" Margin="0, 20" />
-            </StackPanel>
-        </Border>
+            <Border BorderThickness="0,1,0,0" BorderBrush="#FF464646">
+                <StackPanel Width="72" Height="419" Background="#FF464646">
+                    <Button Width="52" Height="52" Name="AddBtn" Margin="0, 30, 0, 10" />
+                    <Button Width="52" Height="52" Name="UpdateBtn" Margin="0, 20" />
+                    <Button Width="52" Height="52" Name="SettingsBtn" Margin="0, 20" />
+                    <Button Width="52" Height="52" Name="QuestionBtn" Margin="0, 20" />
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <StackPanel Width="888" Height="80" Background="#FF323232" Margin="0, -20, 0, 0"/>
     </StackPanel>
 </Window>
