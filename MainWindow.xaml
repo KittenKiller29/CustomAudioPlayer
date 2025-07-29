@@ -5,8 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomAudioPlayer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        ResizeMode="NoResize"
+        Title="CustomAudioPlayer" Height="435" Width="888">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFDADADA"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="15">
+                            <ContentPresenter x:Name="ContentSite"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"
+                                              Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!-- Цвет при наведении -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FFB2D6F5"/>
+                                <!-- Синий цвет -->
+                            </Trigger>
+                            <!-- Цвет для неактивной кнопки -->
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="#FFE8E8E8"/>
+                                <Setter Property="Foreground" Value="#FF515151"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <StackPanel Background="White" Orientation="Horizontal" Width="888" Height="419">
+        <Border BorderThickness="0,1,1,0" BorderBrush="#FF464646">
+            <StackPanel Width="530" Height="419" Background="#FF636668">
+                <Canvas Name="BitAnimation" Width="470" Height="200" Margin="30" Background="#FF464646"/>
+                <Label Name="TrackNameLabel" Content="...audio no playing..." Margin="30, -10, 30, 0" Width="470" 
+                       Height="50" HorizontalContentAlignment="Center" Foreground="#FFDADADA" FontSize="20"/>
+                <StackPanel Width="470" Height="100" Margin="30, -10, 30, 30" Orientation="Horizontal">
+                    <Button Name="BackBtn" Height="60" Width="60" Margin="84, 0, 30, 0"/>
+                    <Button Name="PlayBtn" Height="60" Width="60" Margin="30, 0"/>
+                    <Button Name="NextBtn" Height="60" Width="60" Margin="30, 0"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border BorderThickness="0,1,1,0" BorderBrush="#FF464646">
+            <StackPanel Width="270" Height="419" Background="#FF636668">
+                <StackPanel Width="270" Height="20" Background="#FF464646">
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border BorderThickness="0,1,0,0" BorderBrush="#FF464646">
+            <StackPanel Width="72" Height="419" Background="#FF464646">
+                <Button Width="52" Height="52" Name="AddBtn" Margin="0, 30, 0, 10" />
+                <Button Width="52" Height="52" Name="UpdateBtn" Margin="0, 20" />
+                <Button Width="52" Height="52" Name="SettingsBtn" Margin="0, 20" />
+                <Button Width="52" Height="52" Name="QuestionBtn" Margin="0, 20" />
+            </StackPanel>
+        </Border>
+    </StackPanel>
 </Window>
