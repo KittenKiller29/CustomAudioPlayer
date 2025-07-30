@@ -68,7 +68,9 @@
 
             <Border BorderThickness="0,1,1,0" BorderBrush="#FF464646">
                 <StackPanel Width="270" Height="419" Background="#FF636668">
-                    <StackPanel Width="270" Height="20" Background="#FF464646">
+                    <StackPanel Width="270" Height="30" Background="#FF464646">
+                        <Label Width="270" Height="30" Content="Коллекция" HorizontalContentAlignment="Center" 
+                            Foreground="#FFDADADA" FontSize="16"/>
                     </StackPanel>
                 </StackPanel>
             </Border>
@@ -82,6 +84,9 @@
                 </StackPanel>
             </Border>
         </StackPanel>
-        <StackPanel Width="888" Height="80" Background="#FF323232" Margin="0, -20, 0, 0"/>
+        <StackPanel Width="888" Height="80" Background="#FF323232" Margin="0, -20, 0, 0">
+            <Label Name="InfoLabel" Width="888" Height="40" Margin="0, 12, 0, 0" HorizontalContentAlignment="Center" 
+                   Foreground="#FFDADADA" FontSize="18" Content="Необходима авторизация!"/>
+        </StackPanel>
     </StackPanel>
 </Window>
